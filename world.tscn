@@ -5,16 +5,20 @@
 [ext_resource type="Script" uid="uid://cpw0nvmy1yth7" path="res://player.gd" id="1_fj7yv"]
 [ext_resource type="Script" uid="uid://dpa0vv71rt0bc" path="res://pedestrian.gd" id="3_tlwt5"]
 [ext_resource type="Script" uid="uid://dbfk07ydqonhb" path="res://police.gd" id="4_aqk2v"]
-[ext_resource type="Script" uid="uid://dtvt8pnaqpnch" path="res://camera_2d.gd" id="4_gbfbk"]
+[ext_resource type="Script" uid="uid://bs4irxbmqnqi6" path="res://player_camera_2d.gd" id="4_hiqwa"]
 [ext_resource type="Texture2D" uid="uid://d02s1jrms02x6" path="res://image_23.png" id="5_036b0"]
 [ext_resource type="AudioStream" uid="uid://bbjf2su4r74sj" path="res://tuktuk.wav" id="5_ioo17"]
 [ext_resource type="AudioStream" uid="uid://brpo2ueu2blqc" path="res://horn.wav" id="6_wse8f"]
+[ext_resource type="AudioStream" uid="uid://ch124h1c8rf4n" path="res://enginepop.wav" id="7_70uel"]
 [ext_resource type="Script" uid="uid://cnk2b6q5wyvlf" path="res://Barangay_AutoMap.gd" id="7_pkg7o"]
+[ext_resource type="AudioStream" uid="uid://jlyctx3nb5na" path="res://gearclunk.wav" id="8_hiqwa"]
 [ext_resource type="AudioStream" uid="uid://buyv5mcrnegp1" path="res://siren.wav" id="10_k3n1d"]
 [ext_resource type="AudioStream" uid="uid://crtkh1dpxg5yh" path="res://flutie8211-muscle-car-engine-idling-437781.mp3" id="11_k3n1d"]
+[ext_resource type="Script" uid="uid://d2j6f88y52p24" path="res://score_label.gd" id="14_2u3nc"]
+[ext_resource type="Script" uid="uid://cf0w7fxqa0jgl" path="res://gps_camera_2d.gd" id="14_hiqwa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fj7yv"]
-size = Vector2(81, 50)
+size = Vector2(99.875, 50)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_aqk2v"]
 load_path = "res://.godot/imported/Gemini_Generated_Image_qtdzmsqtdzmsqtdz-removebg-preview.png-b80c96882900cbd643c9e26dbbd0e842.ctex"
@@ -46,16 +50,15 @@ scale = Vector2(0.24409159, 0.28929543)
 texture = ExtResource("1_f3sb7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1708224249]
-position = Vector2(-3, 1)
-scale = Vector2(0.8, 0.8)
+position = Vector2(-1.1999512, 0)
+scale = Vector2(0.79999995, 0.79999995)
 shape = SubResource("RectangleShape2D_fj7yv")
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1548096867 node_paths=PackedStringArray("target_node")]
-position = Vector2(-3, -1)
+[node name="PlayerCamera2D" type="Camera2D" parent="Player" unique_id=1548096867]
+position = Vector2(-1.2499695, 1.2499847)
 scale = Vector2(0.8, 0.8)
 position_smoothing_enabled = true
-script = ExtResource("4_gbfbk")
-target_node = NodePath("..")
+script = ExtResource("4_hiqwa")
 
 [node name="EngineSound" type="AudioStreamPlayer2D" parent="Player" unique_id=624708788]
 stream = ExtResource("5_ioo17")
@@ -63,6 +66,15 @@ autoplay = true
 
 [node name="HornSound" type="AudioStreamPlayer2D" parent="Player" unique_id=1894213260]
 stream = ExtResource("6_wse8f")
+
+[node name="BackfireSound" type="AudioStreamPlayer2D" parent="Player" unique_id=1294573662]
+stream = ExtResource("7_70uel")
+volume_db = -80.0
+
+[node name="GearShiftSound" type="AudioStreamPlayer2D" parent="Player" unique_id=1272912929]
+stream = ExtResource("8_hiqwa")
+autoplay = true
+max_polyphony = 3
 
 [node name="Pedestrian" type="Area2D" parent="." unique_id=1317870685]
 z_index = 5
@@ -168,15 +180,32 @@ texture = SubResource("CompressedTexture2D_aqk2v")
 shape = SubResource("CircleShape2D_036b0")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1035809181]
+layer = 10
 
 [node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=1167424094]
-z_index = 5
+z_index = 10
 offset_left = 1417.0
 offset_top = 1014.0
 offset_right = 1478.0
 offset_bottom = 1037.0
 text = "Score: 0"
+script = ExtResource("14_2u3nc")
 metadata/_edit_use_anchors_ = true
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer" unique_id=2067935931]
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 300.0
+offset_bottom = 300.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer" unique_id=1366179578]
+transparent_bg = true
+size = Vector2i(250, 250)
+
+[node name="gpsCamera2D" type="Camera2D" parent="CanvasLayer/SubViewportContainer/SubViewport" unique_id=1331978113]
+zoom = Vector2(0.15, 0.15)
+script = ExtResource("14_hiqwa")
 
 [node name="BarangayMap" type="Node2D" parent="." unique_id=1548538569]
 script = ExtResource("7_pkg7o")
