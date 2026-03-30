@@ -1,0 +1,71 @@
+{
+    "Building_Concrete_House": [
+        "Building_Concrete_House_Static_054.png",
+        "Building_Concrete_House_Static_055.png",
+        "Building_Concrete_House_Static_060.png"
+    ],
+    "Building_Sari_Sari": [
+        "Building_Sari_Sari_Static_056.png"
+    ],
+    "Building_Wood_Shack": [
+        "Building_Wood_Shack_Static_052.png",
+        "Building_Wood_Shack_Static_053.png",
+        "Building_Wood_Shack_Static_057.png",
+        "Building_Wood_Shack_Static_058.png",
+        "Building_Wood_Shack_Static_059.png"
+    ],
+    "Nature_Bush": [
+        "Nature_Bush_Static_036.png",
+        "Nature_Bush_Static_037.png",
+        "Nature_Bush_Static_038.png",
+        "Nature_Bush_Static_039.png",
+        "Nature_Bush_Static_040.png",
+        "Nature_Bush_Static_041.png",
+        "Nature_Bush_Static_042.png",
+        "Nature_Bush_Static_047.png"
+    ],
+    "Prop_Vegetation": [
+        "Prop_Vegetation_Static_036.png",
+        "Prop_Vegetation_Static_037.png",
+        "Prop_Vegetation_Static_038.png",
+        "Prop_Vegetation_Static_039.png",
+        "Prop_Vegetation_Static_040.png",
+        "Prop_Vegetation_Static_041.png",
+        "Prop_Vegetation_Static_042.png",
+        "Prop_Vegetation_Static_043.png",
+        "Prop_Vegetation_Static_044.png",
+        "Prop_Vegetation_Static_045.png",
+        "Prop_Vegetation_Static_046.png",
+        "Prop_Vegetation_Static_047.png",
+        "Prop_Vegetation_Static_048.png",
+        "Prop_Vegetation_Static_049.png",
+        "Prop_Vegetation_Static_050.png",
+        "Prop_Vegetation_Static_051.png"
+    ],
+    "Structure_Large": [
+        "Structure_Large_Static_052.png",
+        "Structure_Large_Static_053.png",
+        "Structure_Large_Static_054.png",
+        "Structure_Large_Static_055.png",
+        "Structure_Large_Static_056.png",
+        "Structure_Large_Static_057.png",
+        "Structure_Large_Static_058.png",
+        "Structure_Large_Static_060.png",
+        "Structure_Large_Static_061.png"
+    ],
+    "Structure_Small": [
+        "Structure_Small_Static_059.png"
+    ],
+    "Tree_Bushy": [
+        "Tree_Bushy_Static_043.png",
+        "Tree_Bushy_Static_045.png",
+        "Tree_Bushy_Static_048.png",
+        "Tree_Bushy_Static_049.png",
+        "Tree_Bushy_Static_050.png"
+    ],
+    "Tree_Palm": [
+        "Tree_Palm_Static_044.png",
+        "Tree_Palm_Static_046.png",
+        "Tree_Palm_Static_051.png"
+    ]
+}

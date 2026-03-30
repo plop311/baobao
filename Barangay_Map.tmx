@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.1" orientation="orthogonal" renderorder="right-down" width="64" height="34" tilewidth="128" tileheight="128" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" name="Tile_1" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Road_Asphalt/Road_Asphalt_NE_005.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="2" name="Tile_2" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Road_Asphalt/Road_Asphalt_NS_014.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="3" name="Tile_3" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Road_Asphalt/Road_Asphalt_NS_027.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="4" name="Tile_4" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Road_Asphalt/Road_Asphalt_NW_004.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="5" name="Tile_5" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Road_Asphalt/Road_Asphalt_SE_006.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="6" name="Tile_6" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Road_Asphalt/Road_Asphalt_SW_015.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="7" name="Tile_7" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Road_Asphalt/Road_Asphalt_WE_028.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="8" name="Tile_8" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Road_Intersection_Asphalt/Road_Intersection_Asphalt_4_Way_003.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="9" name="Tile_9" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Nature_Bush/Nature_Bush_Static_036.png" width="128" height="128"/>
+  <tile id="0">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="10" name="Tile_10" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Nature_Bush/Nature_Bush_Static_037.png" width="128" height="128"/>
+  <tile id="0">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="11" name="Tile_11" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Nature_Bush/Nature_Bush_Static_038.png" width="128" height="128"/>
+  <tile id="0">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="12" name="Tile_12" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Nature_Bush/Nature_Bush_Static_039.png" width="128" height="128"/>
+  <tile id="0">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="13" name="Tile_13" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Nature_Bush/Nature_Bush_Static_040.png" width="128" height="128"/>
+  <tile id="0">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="14" name="Tile_14" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Nature_Bush/Nature_Bush_Static_041.png" width="128" height="128"/>
+  <tile id="0">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="15" name="Tile_15" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Nature_Bush/Nature_Bush_Static_042.png" width="128" height="128"/>
+  <tile id="0">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="16" name="Tile_16" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Nature_Bush/Nature_Bush_Static_047.png" width="128" height="128"/>
+  <tile id="0">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="17" name="Tile_17" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Building_Concrete_House/Building_Concrete_House_Static_054.png" width="128" height="128"/>
+  <tile id="0">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="18" name="Tile_18" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Building_Concrete_House/Building_Concrete_House_Static_055.png" width="128" height="128"/>
+  <tile id="0">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="19" name="Tile_19" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Building_Concrete_House/Building_Concrete_House_Static_060.png" width="128" height="128"/>
+  <tile id="0">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="20" name="Tile_20" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Building_Sari_Sari/Building_Sari_Sari_Static_056.png" width="128" height="128"/>
+  <tile id="0">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="21" name="Tile_21" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Building_Wood_Shack/Building_Wood_Shack_Static_052.png" width="128" height="128"/>
+  <tile id="0">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="22" name="Tile_22" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Building_Wood_Shack/Building_Wood_Shack_Static_053.png" width="128" height="128"/>
+  <tile id="0">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="23" name="Tile_23" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Building_Wood_Shack/Building_Wood_Shack_Static_057.png" width="128" height="128"/>
+  <tile id="0">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="24" name="Tile_24" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Building_Wood_Shack/Building_Wood_Shack_Static_058.png" width="128" height="128"/>
+  <tile id="0">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="25" name="Tile_25" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Building_Wood_Shack/Building_Wood_Shack_Static_059.png" width="128" height="128"/>
+  <tile id="0">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="26" name="Tile_26" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Tree_Bushy/Tree_Bushy_Static_043.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="27" name="Tile_27" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Tree_Bushy/Tree_Bushy_Static_045.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="28" name="Tile_28" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Tree_Bushy/Tree_Bushy_Static_048.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="29" name="Tile_29" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Tree_Bushy/Tree_Bushy_Static_049.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="30" name="Tile_30" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Tree_Bushy/Tree_Bushy_Static_050.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="31" name="Tile_31" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Tree_Palm/Tree_Palm_Static_044.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="32" name="Tile_32" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Tree_Palm/Tree_Palm_Static_046.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="33" name="Tile_33" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Barangay_Deep_Sorted/Tree_Palm/Tree_Palm_Static_051.png" width="128" height="128"/>
+ </tileset>
+ <layer id="1" name="Barangay" width="64" height="34">
+  <data encoding="csv">
+32,30,30,28,33,33,5,7,27,29,31,26,30,28,30,29,32,3,31,33,29,26,26,30,5,7,30,29,30,32,33,5,7,28,27,31,30,31,28,33,26,31,27,31,26,30,2,32,32,32,31,29,27,2,32,28,5,7,32,30,26,27,29,31,
+32,28,27,31,26,26,3,27,30,28,32,30,27,32,31,28,29,2,27,31,32,30,31,31,2,29,26,27,21,17,24,2,33,23,18,20,33,31,33,29,26,29,31,28,31,27,2,32,28,30,28,31,31,3,31,28,3,27,33,27,31,27,27,26,
+32,28,29,30,30,31,2,32,30,26,29,31,28,30,33,28,32,3,33,29,28,33,26,33,2,33,31,31,19,22,19,2,31,24,24,22,29,32,28,30,28,32,30,30,28,30,2,26,28,30,32,28,32,2,29,29,3,33,28,27,31,27,26,31,
+28,30,32,32,29,27,2,31,26,26,33,33,28,29,30,32,30,3,33,12,10,26,27,30,3,31,27,33,26,28,33,3,29,32,27,26,26,31,31,30,29,28,29,33,28,33,3,27,26,29,14,11,16,3,26,31,2,32,27,28,33,27,28,29,
+26,30,31,28,26,32,2,29,30,27,29,30,31,29,30,33,30,3,29,14,10,29,33,33,3,28,14,14,12,16,14,3,29,24,20,20,30,29,28,30,27,29,28,32,27,27,2,26,29,28,13,12,11,3,30,26,3,33,28,30,32,29,28,32,
+26,26,30,27,29,31,3,31,30,30,31,27,33,33,31,30,30,3,33,27,31,27,26,26,2,32,28,29,31,27,33,2,29,17,20,20,31,28,29,31,32,27,28,27,28,26,3,28,32,33,15,11,9,2,26,31,2,29,28,31,32,26,27,28,
+7,7,7,7,7,7,8,7,7,7,7,7,7,7,7,7,7,8,7,7,7,7,7,7,8,7,7,7,7,7,7,8,29,32,29,26,27,27,2,32,33,33,28,29,30,28,2,29,31,28,31,26,26,4,7,7,8,7,7,7,7,7,7,7,
+27,32,27,30,18,25,3,28,26,20,24,23,23,32,15,11,29,2,32,10,12,26,25,30,2,33,13,10,17,18,19,2,28,20,18,19,27,28,2,26,28,31,28,25,20,31,2,30,11,13,27,24,20,2,9,15,3,27,25,22,33,32,26,30,
+33,30,31,26,19,22,2,30,26,18,23,25,20,30,9,13,26,3,31,9,16,30,24,26,2,26,16,16,24,21,19,3,32,23,20,20,23,23,3,30,19,21,30,25,22,28,2,31,10,9,29,22,22,2,16,11,2,28,19,21,31,29,30,26,
+33,32,30,33,21,17,3,26,31,23,17,22,24,32,9,14,30,3,32,10,14,30,19,31,2,26,32,32,19,18,18,2,28,23,22,17,23,17,2,31,24,22,33,23,25,33,3,26,12,15,30,20,17,3,29,29,3,33,21,17,31,30,30,27,
+26,26,29,32,30,31,4,7,7,7,7,7,7,7,7,7,7,8,7,7,7,7,7,7,3,32,26,30,24,23,24,6,7,7,7,7,7,7,4,7,7,7,7,7,7,7,8,7,7,7,7,7,7,2,15,26,2,31,27,32,30,33,26,33,
+29,30,26,30,18,20,3,27,18,23,30,27,31,31,20,18,29,2,26,18,20,31,25,31,2,32,30,27,19,17,22,3,30,24,22,33,31,30,28,27,14,9,10,12,12,26,2,29,33,32,27,27,32,2,32,30,2,32,23,21,28,27,30,33,
+27,26,31,27,22,17,3,32,17,22,31,27,33,31,25,17,31,3,32,25,22,32,17,28,2,27,31,30,24,22,19,3,33,17,20,33,33,32,28,31,10,16,12,12,9,27,3,30,14,14,28,29,27,2,32,28,3,29,31,26,33,26,32,29,
+26,27,33,30,30,30,3,33,30,30,30,29,30,32,29,28,33,2,29,25,22,31,27,26,2,32,31,31,32,29,27,2,32,30,29,30,30,28,33,31,14,10,16,16,10,29,3,32,9,12,32,28,30,2,27,33,3,30,29,30,31,27,28,28,
+28,31,30,28,24,17,2,32,14,14,9,11,11,32,9,16,33,2,28,14,10,22,25,32,2,27,22,18,22,19,24,3,29,22,20,23,19,22,18,21,11,10,9,11,10,29,3,32,14,9,29,25,23,2,20,21,2,33,17,20,26,31,32,26,
+29,33,31,30,18,25,3,30,9,9,13,10,13,32,9,14,26,2,29,9,13,21,21,30,3,26,17,21,23,21,24,3,31,17,21,22,23,25,18,22,13,13,14,11,16,29,3,27,14,9,29,25,23,2,20,23,2,28,25,20,27,28,29,29,
+30,32,31,26,33,26,2,28,30,30,29,32,29,30,30,29,27,2,28,33,29,27,26,33,2,31,30,31,30,26,29,3,28,31,26,31,27,32,30,30,30,29,32,26,33,29,2,28,29,26,27,29,32,2,27,28,2,28,30,32,31,33,27,26,
+7,7,7,7,7,7,8,7,7,7,7,7,7,7,7,7,7,8,7,7,7,7,7,7,7,7,7,7,7,7,7,8,7,7,7,7,7,7,4,7,7,7,7,7,7,7,8,7,7,7,7,7,7,2,7,7,8,7,7,7,7,7,7,7,
+33,31,31,31,28,30,2,33,26,32,29,29,28,29,32,30,31,3,26,30,31,30,26,26,32,27,30,33,26,28,31,2,28,31,26,30,28,27,3,26,32,30,33,32,33,32,3,26,32,29,32,32,29,27,26,27,3,27,28,33,30,30,27,29,
+30,28,30,29,17,17,2,31,14,15,15,14,10,33,13,15,28,3,27,21,25,33,25,30,23,19,17,17,18,24,20,3,33,25,25,24,21,18,3,26,26,24,31,14,15,31,3,27,9,11,26,12,9,11,16,15,2,26,19,18,33,28,28,27,
+31,31,30,32,25,19,3,26,14,15,11,13,13,26,15,15,28,3,30,23,23,33,23,27,20,20,23,18,18,17,19,2,31,19,21,19,17,23,3,28,33,20,27,10,15,27,3,27,12,11,31,9,16,16,12,13,2,28,25,19,28,31,28,26,
+31,32,31,26,32,31,3,28,13,11,11,12,11,26,18,23,27,2,31,32,28,31,32,32,30,27,29,32,28,26,30,2,26,26,32,29,31,31,2,30,26,25,33,14,9,33,3,27,11,14,26,23,21,32,22,19,3,33,26,28,32,31,32,31,
+27,28,29,30,30,26,2,31,15,14,13,11,11,32,25,24,29,2,30,19,20,29,28,29,27,31,32,29,26,19,19,2,29,14,10,30,12,12,2,32,27,20,28,13,15,33,2,31,14,14,29,25,23,29,24,18,2,29,14,12,33,30,33,33,
+29,26,32,32,32,29,2,31,27,31,33,28,27,31,32,32,30,2,29,28,33,33,29,32,27,26,32,29,33,32,29,2,32,30,31,27,31,31,3,27,26,32,26,27,29,30,3,29,26,26,30,33,32,32,33,29,3,32,27,30,32,33,30,29,
+7,7,7,7,7,7,8,7,7,7,7,7,7,7,7,7,7,8,7,7,7,7,7,7,7,7,7,7,7,7,7,8,7,7,7,7,7,7,8,7,7,7,7,7,7,7,8,7,7,7,7,7,7,7,7,7,8,7,7,7,7,7,7,7,
+26,29,26,28,26,31,2,26,32,27,28,32,31,32,31,27,30,3,33,26,32,31,33,27,3,29,26,27,32,28,33,2,26,32,28,29,26,32,2,26,32,31,33,28,29,28,3,26,26,30,32,27,28,30,28,30,2,29,28,30,27,30,31,28,
+28,26,28,17,18,19,2,28,16,15,11,33,30,31,24,19,26,2,33,23,17,18,24,28,2,29,22,19,28,18,25,3,29,12,15,13,12,12,3,31,32,15,12,23,18,31,3,33,23,19,19,21,20,30,25,17,2,29,32,30,30,33,30,29,
+26,31,31,18,24,21,3,28,15,14,12,29,29,26,20,21,31,2,33,18,22,22,17,29,3,26,28,32,28,33,31,2,26,12,15,9,11,12,3,30,29,11,10,21,22,29,2,29,26,30,30,29,28,28,23,23,2,32,31,32,30,28,28,33,
+33,30,32,30,30,26,3,27,11,9,9,32,26,32,29,31,31,2,32,24,24,27,26,33,2,32,31,32,27,18,23,3,26,12,10,15,29,27,29,30,27,27,26,27,27,33,3,32,32,33,29,31,30,28,10,11,2,33,27,31,29,31,30,32,
+28,32,26,28,29,28,3,27,13,10,12,32,31,31,17,19,27,3,27,24,20,28,12,27,2,29,33,28,26,23,23,2,27,11,16,13,29,32,33,33,30,27,26,10,13,31,3,31,26,31,32,30,30,28,9,13,3,29,29,29,27,28,29,30,
+31,27,27,28,26,29,2,33,9,16,9,33,29,32,24,24,28,2,29,28,27,27,29,33,2,32,30,31,31,18,18,3,26,9,15,13,32,33,26,31,30,31,31,11,12,28,2,28,32,32,27,28,30,26,33,28,3,28,31,31,31,31,28,30,
+33,30,31,33,32,26,2,33,31,29,32,33,31,28,31,28,27,2,30,9,13,33,32,29,3,26,33,29,31,17,23,2,29,26,29,31,33,31,26,33,33,26,30,27,28,27,3,29,28,33,30,26,26,32,27,28,2,31,26,28,33,32,30,26,
+26,31,32,30,31,31,3,33,29,28,28,30,32,29,32,31,27,2,31,13,13,31,32,27,2,29,32,33,30,19,19,3,28,28,27,28,26,29,28,30,30,26,30,32,27,28,2,30,31,31,26,26,30,27,27,32,2,29,32,33,32,33,29,26,
+33,29,33,27,28,29,1,7,26,32,29,26,26,28,26,26,28,2,29,28,33,32,31,33,1,7,29,31,32,23,21,1,7,28,32,27,32,32,28,30,27,28,33,28,27,27,3,30,33,26,29,28,28,30,29,27,1,7,27,30,30,30,28,33
+  </data>
+ </layer>
+</map>

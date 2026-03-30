@@ -1,0 +1,191 @@
+[gd_scene format=3 uid="uid://di5fl0nywgssa"]
+
+[ext_resource type="Script" uid="uid://dsnuy1igy8r2" path="res://world.gd" id="1_dwbse"]
+[ext_resource type="Texture2D" uid="uid://on05ahmh4rq6" path="res://image_8-removebg-preview.png" id="1_f3sb7"]
+[ext_resource type="Script" uid="uid://cpw0nvmy1yth7" path="res://player.gd" id="1_fj7yv"]
+[ext_resource type="Script" uid="uid://dpa0vv71rt0bc" path="res://pedestrian.gd" id="3_tlwt5"]
+[ext_resource type="Script" uid="uid://dbfk07ydqonhb" path="res://police.gd" id="4_aqk2v"]
+[ext_resource type="Script" uid="uid://dtvt8pnaqpnch" path="res://camera_2d.gd" id="4_gbfbk"]
+[ext_resource type="Texture2D" uid="uid://d02s1jrms02x6" path="res://image_23.png" id="5_036b0"]
+[ext_resource type="AudioStream" uid="uid://bbjf2su4r74sj" path="res://tuktuk.wav" id="5_ioo17"]
+[ext_resource type="AudioStream" uid="uid://brpo2ueu2blqc" path="res://horn.wav" id="6_wse8f"]
+[ext_resource type="Script" uid="uid://cnk2b6q5wyvlf" path="res://Barangay_AutoMap.gd" id="7_pkg7o"]
+[ext_resource type="AudioStream" uid="uid://buyv5mcrnegp1" path="res://siren.wav" id="10_k3n1d"]
+[ext_resource type="AudioStream" uid="uid://crtkh1dpxg5yh" path="res://flutie8211-muscle-car-engine-idling-437781.mp3" id="11_k3n1d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fj7yv"]
+size = Vector2(81, 50)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_aqk2v"]
+load_path = "res://.godot/imported/Gemini_Generated_Image_qtdzmsqtdzmsqtdz-removebg-preview.png-b80c96882900cbd643c9e26dbbd0e842.ctex"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_036b0"]
+radius = 8.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwbse"]
+size = Vector2(464, 196)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gbfbk"]
+radius = 16.372728
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gbfbk"]
+size = Vector2(230, 100)
+
+[node name="World" type="Node2D" unique_id=1770041143]
+position = Vector2(780, 141)
+script = ExtResource("1_dwbse")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=581296323]
+z_index = 5
+position = Vector2(75.00001, 436.99997)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_fj7yv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=174972267]
+scale = Vector2(0.24409159, 0.28929543)
+texture = ExtResource("1_f3sb7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1708224249]
+position = Vector2(-3, 1)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_fj7yv")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1548096867 node_paths=PackedStringArray("target_node")]
+position = Vector2(-3, -1)
+scale = Vector2(0.8, 0.8)
+position_smoothing_enabled = true
+script = ExtResource("4_gbfbk")
+target_node = NodePath("..")
+
+[node name="EngineSound" type="AudioStreamPlayer2D" parent="Player" unique_id=624708788]
+stream = ExtResource("5_ioo17")
+autoplay = true
+
+[node name="HornSound" type="AudioStreamPlayer2D" parent="Player" unique_id=1894213260]
+stream = ExtResource("6_wse8f")
+
+[node name="Pedestrian" type="Area2D" parent="." unique_id=1317870685]
+z_index = 5
+position = Vector2(-181, -38)
+script = ExtResource("3_tlwt5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pedestrian" unique_id=867407114]
+scale = Vector2(0.08161004, 0.06978319)
+texture = SubResource("CompressedTexture2D_aqk2v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pedestrian" unique_id=2013867168]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_036b0")
+
+[node name="Police" type="CharacterBody2D" parent="." unique_id=1125100440]
+z_index = 5
+position = Vector2(805, -77)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("4_aqk2v")
+
+[node name="Sprite2D" type="Sprite2D" parent="Police" unique_id=1976924808]
+rotation = 3.1415927
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_036b0")
+
+[node name="HitBox" type="Area2D" parent="Police" unique_id=1767949862]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Police/HitBox" unique_id=1147823110]
+position = Vector2(4, -3)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_dwbse")
+
+[node name="DetectionZone" type="Area2D" parent="Police" unique_id=1794176078]
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Police/DetectionZone" unique_id=1048039065]
+position = Vector2(3.9999995, -3.637979e-12)
+scale = Vector2(88, 88)
+shape = SubResource("CircleShape2D_gbfbk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Police" unique_id=1206674171]
+position = Vector2(2, 0)
+shape = SubResource("RectangleShape2D_gbfbk")
+
+[node name="siren" type="AudioStreamPlayer2D" parent="Police" unique_id=1590370824]
+position = Vector2(16, 0)
+stream = ExtResource("10_k3n1d")
+autoplay = true
+max_distance = 2945.0
+
+[node name="engine" type="AudioStreamPlayer2D" parent="Police" unique_id=495813140]
+stream = ExtResource("11_k3n1d")
+autoplay = true
+
+[node name="Pedestrian2" type="Area2D" parent="." unique_id=92888159]
+z_index = 5
+position = Vector2(-25, -51)
+script = ExtResource("3_tlwt5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pedestrian2" unique_id=133570592]
+position = Vector2(2, 1)
+scale = Vector2(0.08161004, 0.06978319)
+texture = SubResource("CompressedTexture2D_aqk2v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pedestrian2" unique_id=590293026]
+shape = SubResource("CircleShape2D_036b0")
+
+[node name="Pedestrian" type="Area2D" parent="Pedestrian2" unique_id=1442421373]
+position = Vector2(-281, 11)
+script = ExtResource("3_tlwt5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pedestrian2/Pedestrian" unique_id=935028736]
+scale = Vector2(0.08161004, 0.06978319)
+texture = SubResource("CompressedTexture2D_aqk2v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pedestrian2/Pedestrian" unique_id=180113116]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_036b0")
+
+[node name="Pedestrian4" type="Area2D" parent="." unique_id=1495460553]
+z_index = 5
+position = Vector2(-25, -51)
+script = ExtResource("3_tlwt5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pedestrian4" unique_id=1251141395]
+position = Vector2(2, 1)
+scale = Vector2(0.08161004, 0.06978319)
+texture = SubResource("CompressedTexture2D_aqk2v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pedestrian4" unique_id=531050284]
+shape = SubResource("CircleShape2D_036b0")
+
+[node name="Pedestrian3" type="Area2D" parent="." unique_id=2118358343]
+z_index = 5
+position = Vector2(-81, -15)
+script = ExtResource("3_tlwt5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pedestrian3" unique_id=1941385492]
+scale = Vector2(0.08161004, 0.06978319)
+texture = SubResource("CompressedTexture2D_aqk2v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pedestrian3" unique_id=768486525]
+shape = SubResource("CircleShape2D_036b0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1035809181]
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=1167424094]
+z_index = 5
+offset_left = 1417.0
+offset_top = 1014.0
+offset_right = 1478.0
+offset_bottom = 1037.0
+text = "Score: 0"
+metadata/_edit_use_anchors_ = true
+
+[node name="BarangayMap" type="Node2D" parent="." unique_id=1548538569]
+script = ExtResource("7_pkg7o")
+
+[connection signal="body_entered" from="Pedestrian" to="Pedestrian" method="_on_body_entered"]
+[connection signal="body_entered" from="Police/HitBox" to="Police" method="_on_hit_box_body_entered"]
+[connection signal="body_entered" from="Police/DetectionZone" to="Police" method="_on_detection_zone_body_entered"]
+[connection signal="body_exited" from="Police/DetectionZone" to="Player" method="_on_detection_zone_body_exited"]
+[connection signal="body_entered" from="Pedestrian2" to="Pedestrian2" method="_on_body_entered"]
+[connection signal="body_entered" from="Pedestrian2/Pedestrian" to="Pedestrian2/Pedestrian" method="_on_body_entered"]
+[connection signal="body_entered" from="Pedestrian4" to="Pedestrian4" method="_on_body_entered"]
+[connection signal="body_entered" from="Pedestrian3" to="Pedestrian3" method="_on_body_entered"]
