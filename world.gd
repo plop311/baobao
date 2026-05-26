@@ -14,6 +14,72 @@ func _ready():
 	# 3. Set the Camera boundaries
 	setup_camera_limits()
 
+	spawn_props(20)
+	spawn_objective()
+
+func spawn_objective():
+	var roads = get_tree().get_nodes_in_group("Roads")
+	if roads.size() == 0: return
+
+	var road = roads[randi() % roads.size()]
+	var points = road.curve.get_baked_points()
+	if points.size() > 0:
+		var pt = points[randi() % points.size()]
+		var obj = Area2D.new()
+		obj.name = "DeliveryObjective"
+		obj.global_position = road.to_global(pt)
+
+		var collision = CollisionShape2D.new()
+		var shape = CircleShape2D.new()
+		shape.radius = 100.0
+		collision.shape = shape
+		obj.add_child(collision)
+
+		var visual = ColorRect.new()
+		visual.color = Color(0, 1, 0, 0.5) # Translucent green box
+		visual.size = Vector2(200, 200)
+		visual.position = Vector2(-100, -100)
+		obj.add_child(visual)
+
+		obj.body_entered.connect(_on_objective_entered.bind(obj))
+		add_child(obj)
+
+func _on_objective_entered(body: Node2D, obj: Area2D):
+	if body.name == "Player":
+		total_score += 100
+		update_ui()
+		obj.queue_free()
+		spawn_objective()
+
+func spawn_props(count: int):
+	var roads = get_tree().get_nodes_in_group("Roads")
+	if roads.size() == 0: return
+
+	var prop_script = load("res://prop.gd")
+	for i in range(count):
+		var road = roads[randi() % roads.size()]
+		var points = road.curve.get_baked_points()
+		if points.size() > 0:
+			var pt = points[randi() % points.size()]
+			var prop = Area2D.new()
+			prop.name = "Prop_" + str(i)
+			prop.set_script(prop_script)
+			prop.global_position = road.to_global(pt) + Vector2(randf_range(-40, 40), randf_range(-40, 40))
+
+			var collision = CollisionShape2D.new()
+			var shape = RectangleShape2D.new()
+			shape.size = Vector2(30, 30)
+			collision.shape = shape
+			prop.add_child(collision)
+
+			var visual = ColorRect.new()
+			visual.color = Color(0.6, 0.4, 0.2) # Brown box
+			visual.size = Vector2(30, 30)
+			visual.position = Vector2(-15, -15)
+			prop.add_child(visual)
+
+			add_child(prop)
+
 func _input(event):
 	# TRIGGER: Tap the 'C' key to toggle between Bao-bao and Police
 	if event is InputEventKey and event.pressed and event.keycode == KEY_C:

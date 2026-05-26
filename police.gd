@@ -26,8 +26,8 @@ var siren_timer: float = 0.0
 # Audio & Visual Nodes
 @onready var light_red = get_node_or_null("SirenRed")
 @onready var light_blue = get_node_or_null("SirenBlue")
-@onready var siren_audio = get_node_or_null("SirenAudio")
-@onready var engine_audio = get_node_or_null("EngineAudio")
+@onready var siren_audio = get_node_or_null("siren")
+@onready var engine_audio = get_node_or_null("engine")
 @onready var detection_zone_shape = get_node_or_null("DetectionZone/CollisionShape2D")
 
 # Internal Logic
@@ -45,6 +45,22 @@ var recovery_attempts: int = 0
 func _ready():
 	await get_tree().process_frame
 	
+	if not light_red:
+		light_red = ColorRect.new()
+		light_red.name = "SirenRed"
+		light_red.color = Color(1, 0, 0, 0.8)
+		light_red.size = Vector2(20, 20)
+		light_red.position = Vector2(0, -20)
+		add_child(light_red)
+
+	if not light_blue:
+		light_blue = ColorRect.new()
+		light_blue.name = "SirenBlue"
+		light_blue.color = Color(0, 0, 1, 0.8)
+		light_blue.size = Vector2(20, 20)
+		light_blue.position = Vector2(0, 0)
+		add_child(light_blue)
+
 	# SYNC RADAR TO CIRCLE: This makes the math match your blue circle in the editor
 	if detection_zone_shape and detection_zone_shape.shape is CircleShape2D:
 		detection_range = detection_zone_shape.shape.radius
@@ -152,11 +168,11 @@ func _run_siren_animation(delta):
 		light_blue.visible = true
 		var pulse = sin(siren_timer)
 		if pulse > 0:
-			light_red.energy = 12.0
-			light_blue.energy = 0.0
+			light_red.visible = true
+			light_blue.visible = false
 		else:
-			light_red.energy = 0.0
-			light_blue.energy = 12.0
+			light_red.visible = false
+			light_blue.visible = true
 
 func _toggle_siren_visuals(active: bool):
 	if siren_audio and not active:
