@@ -45,6 +45,39 @@ var is_reloading = false
 var current_speed_mod = 1.0
 var grid_pos = Vector2i.ZERO
 
+var tire_smoke: CPUParticles2D
+
+func _ready():
+	if not exhaust_particles:
+		exhaust_particles = CPUParticles2D.new()
+		exhaust_particles.name = "ExhaustParticles"
+		exhaust_particles.amount = 20
+		exhaust_particles.lifetime = 0.5
+		exhaust_particles.one_shot = true
+		exhaust_particles.explosiveness = 1.0
+		exhaust_particles.emission_shape = CPUParticles2D.EMISSION_SHAPE_POINT
+		exhaust_particles.spread = 30.0
+		exhaust_particles.gravity = Vector2(0, 0)
+		exhaust_particles.initial_velocity_min = 100.0
+		exhaust_particles.initial_velocity_max = 200.0
+		exhaust_particles.color = Color(1, 0.5, 0, 1)
+		exhaust_particles.position = Vector2(-20, 0)
+		add_child(exhaust_particles)
+
+	tire_smoke = CPUParticles2D.new()
+	tire_smoke.name = "TireSmoke"
+	tire_smoke.amount = 50
+	tire_smoke.lifetime = 1.0
+	tire_smoke.emitting = false
+	tire_smoke.emission_shape = CPUParticles2D.EMISSION_SHAPE_POINT
+	tire_smoke.spread = 60.0
+	tire_smoke.gravity = Vector2(0, 0)
+	tire_smoke.initial_velocity_min = 50.0
+	tire_smoke.initial_velocity_max = 100.0
+	tire_smoke.color = Color(0.8, 0.8, 0.8, 0.5)
+	tire_smoke.position = Vector2(-15, 0)
+	add_child(tire_smoke)
+
 func _physics_process(delta):
 	if is_reloading: return
 
@@ -82,6 +115,11 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_select"): # Spacebar
 		current_drift = handbrake_drift
 		velocity = velocity.move_toward(Vector2.ZERO, braking_force * delta)
+		if velocity.length() > 100 and tire_smoke:
+			tire_smoke.emitting = true
+	else:
+		if tire_smoke:
+			tire_smoke.emitting = false
 	
 	velocity = forward_vel + (lateral_vel * current_drift)
 
@@ -125,6 +163,10 @@ func _trigger_gear_shift():
 		gear_audio.play()
 	else:
 		print("❌ ERROR: GearShiftSound node not found!")
+
+	var cam = get_node_or_null("PlayerCamera2D")
+	if cam and cam.has_method("add_trauma"):
+		cam.add_trauma(0.3)
 	
 	if randf() > 0.4:
 		_trigger_backfire_effect()
@@ -137,6 +179,10 @@ func _trigger_backfire_effect():
 	# Bonus Chaos for every loud pop
 	score += 50 
 	
+	var cam = get_node_or_null("PlayerCamera2D")
+	if cam and cam.has_method("add_trauma"):
+		cam.add_trauma(0.5)
+
 	if backfire_audio:
 		backfire_audio.pitch_scale = randf_range(0.8, 1.4)
 		backfire_audio.play()

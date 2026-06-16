@@ -12,6 +12,13 @@ extends Camera2D
 @export var max_zoom: float = 0.9    # Zoomed out (High speed)
 @export var zoom_speed: float = 2.0  # How fast the lens moves
 
+@export_group("Shake Settings")
+@export var decay: float = 0.8  # How quickly the shaking stops
+@export var max_offset: Vector2 = Vector2(100, 75)  # Maximum render offset in pixels
+@export var max_roll: float = 0.1  # Maximum rotation in radians
+var trauma: float = 0.0  # Current shake strength
+var trauma_power: int = 2  # Trauma exponent for a non-linear shake
+
 func _ready():
 	# Force this camera to be the master of the main screen
 	make_current()
@@ -39,6 +46,19 @@ func _process(delta):
 	
 	# Smoothly interpolate the zoom so it doesn't snap
 	zoom = zoom.lerp(target_zoom, zoom_speed * delta)
+
+	if trauma > 0:
+		trauma = max(trauma - decay * delta, 0)
+		shake()
+
+func add_trauma(amount: float):
+	trauma = min(trauma + amount, 1.0)
+
+func shake():
+	var amount = pow(trauma, trauma_power)
+	rotation = max_roll * amount * randf_range(-1, 1)
+	offset.x = max_offset.x * amount * randf_range(-1, 1)
+	offset.y = max_offset.y * amount * randf_range(-1, 1)
 
 func _notification(what):
 	# Security check: If something tries to steal 'current' status, 

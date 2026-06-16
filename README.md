@@ -78,27 +78,27 @@ Backfires: Rapid-fire white noise bursts modeled after a machine gun.
 
 [x] Advanced Stuck-Detection and Emergency Respawn for AI.
 
-🏎️ Phase 2: The "Juice" (In Progress)
+🏎️ Phase 2: The "Juice" (Completed)
 
 [x] Muffler Pops: Random backfire sounds and fire particles wired to throttle release.
 
 [x] New Genre: Custom Industrial soundtrack and foley effects.
 
-[ ] Screen Shake: Dynamic camera rattle during high-speed chases.
+[x] Screen Shake: Dynamic camera rattle during high-speed chases.
 
-[ ] Tire Smoke: Drift particles and skid marks.
+[x] Tire Smoke: Drift particles and skid marks.
 
-[ ] Siren Restoration: Bug-free, state-locked siren logic.
+[x] Siren Restoration: Bug-free, state-locked siren logic.
 
-🌟 Phase 3: The Game Loop (In Progress)
+🌟 Phase 3: The Game Loop (Completed)
 
 [x] PIP Navigation: Functional SubViewport GPS minimap.
 
 [x] Wanted Level UI: High-visibility Chaos Meter tracking pursuit intensity.
 
-[ ] Barangay Props: Destructible fruit stands, trash cans, and wandering chickens.
+[x] Barangay Props: Destructible fruit stands, trash cans, and wandering chickens.
 
-[ ] Objectives: Deliveries or time trials while avoiding the LTO.
+[x] Objectives: Deliveries or time trials while avoiding the LTO.
 
 📂 Asset Registry
 
